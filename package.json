@@ -1,0 +1,16 @@
+{
+  "name": "aura-platform",
+  "private": true,
+  "description": "AURA - AI Assistant Platform Monorepo",
+  "workspaces": [
+    "aura/frontend-web",
+    "aura/frontend-mobile",
+    "aura/shared-types"
+  ],
+  "scripts": {
+    "web:dev": "npm run dev -w aura/frontend-web",
+    "web:build": "npm run build -w aura/frontend-web",
+    "mobile:start": "npm run start -w aura/frontend-mobile",
+    "types:build": "npm run build -w aura/shared-types"
+  }
+}

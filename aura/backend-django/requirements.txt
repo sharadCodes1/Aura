@@ -1,0 +1,16 @@
+django>=5.0,<5.1
+djangorestframework
+django-cors-headers
+django-channels[daphne]
+channels-redis
+djangorestframework-simplejwt
+psycopg2-binary
+redis
+celery
+django-celery-results
+django-celery-beat
+flower
+python-dotenv
+whitenoise
+gunicorn
+uvicorn
