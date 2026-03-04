@@ -15,3 +15,8 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['id', 'email', 'name', 'avatarUrl']
+
+class MemorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Memory
+        fields = ['id', 'content', 'metadata', 'created_at']

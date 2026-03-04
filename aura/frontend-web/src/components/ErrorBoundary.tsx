@@ -1,4 +1,4 @@
-import { Component, ErrorInfo, ReactNode } from 'react';
+import { Component, type ErrorInfo, type ReactNode } from 'react';
 import { AlertTriangle, RefreshCcw } from 'lucide-react';
 
 interface Props {
@@ -41,7 +41,7 @@ export class ErrorBoundary extends Component<Props, State> {
                         <RefreshCcw size={18} />
                         Reload Application
                     </button>
-                    {process.env.NODE_ENV === 'development' && (
+                    {import.meta.env.DEV && (
                         <pre className="mt-8 p-4 bg-black/50 rounded-lg text-red-400 text-xs text-left overflow-auto max-w-2xl">
                             {this.state.error?.toString()}
                         </pre>
@@ -50,6 +50,6 @@ export class ErrorBoundary extends Component<Props, State> {
             );
         }
 
-        return this.children;
+        return this.props.children;
     }
 }
